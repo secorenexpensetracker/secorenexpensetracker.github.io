@@ -1,0 +1,147 @@
+
+
+#signup-main-container {
+    text-align: center;
+}
+
+
+#signup-form-container {
+    display: inline-block;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 20px;
+
+}
+
+#signup-form-logo {
+    font-family: 'Roboto';
+    font-size: 45px;
+    color: #1cb092;
+    cursor: pointer; 
+    text-decoration: none;
+}
+
+#signup-form-title {
+    font-family: 'Roboto';
+    font-size: 30px;
+    display: block;
+    text-align: left;
+    margin-top: 70px;
+    
+}
+
+.submit-form-input {
+    display: block;
+    width: 300px;
+    margin: auto;
+    font-size: 20px;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    -webkit-appearance: none;
+    padding: 5px;
+    border: none;
+    border: 1px solid #c9c9c9;
+    
+}
+
+.signup-form-main-banner {
+    font-family: 'Roboto';
+    text-align: left;
+    margin-bottom: 0;
+    margin-left: 2px;
+}
+
+#submit-form-email {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#submit-form-password {
+    margin-top: 10px;
+}
+
+#submit-form-confirm-password {
+    margin-top: 10px;
+}
+
+.signup-form-message {
+    font-family: 'Roboto';
+    font-size: 10px;
+    width: 300px;
+    color: red;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 1s;
+    margin-top: 10px;
+}
+
+#signup-form-email-show-message {
+    opacity: 1;
+}
+
+#signup-form-password-show-message {
+    opacity: 1;
+}
+
+#signup-form-confirm-password-show-message {
+    opacity: 1;
+}
+
+.signup-form-submit-button {
+    color: white;
+    border: none;
+    -webkit-appearance: none;
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #3498db;
+    opacity: 0.5;
+    pointer-events:none;
+    margin-top: 10px;
+    transition: opacity 1s;
+    margin-bottom: 30px;
+    width: 310px;
+}
+
+#signup-form-submit-form-button-valid {
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+#signup-form-submit-form-button-valid:hover {
+    background-color: gray;
+}
+
+#submit-form-signin-signup {
+    font-family: 'Roboto';
+    color: gray;
+    margin-bottom: 50px;
+}
+
+#submit-form-signin-signup a {
+    font-family: 'Roboto';
+    color: #1cb092;
+    text-decoration: none;
+}
+
+
+#submit-form-signin-signup a:hover {
+    color: black;
+}
+
+
+
+
+
+#submit-form-footer {
+    color: gray;
+    font-family: 'Roboto';
+    margin: 10px;
+    cursor: pointer;
+    text-decoration: none; 
+}
+
+#submit-form-footer:hover {
+    color: black;
+}

@@ -1,0 +1,119 @@
+#signin-main-container {
+    text-align: center;
+    font-family: 'Roboto';
+}
+
+#signin-form-container {
+    display: inline-block;    
+    width: 300px;
+    padding: 20px;
+    
+}
+
+
+#signin-logo {
+    font-size: 45px;
+    color: #1cb092;
+    display: block;
+    cursor: pointer; 
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+
+#signin-form-main-banner {
+    font-size: 25px;
+    text-align: left;
+    margin-left: 15px;
+    
+}
+
+
+.signin-input-banner {
+    color: gray;
+    font-size: 15px;
+    margin-bottom: 5px;
+    text-align: left;
+    margin-left: 20px;
+    
+}
+
+#signin-forgot-password {
+    color: #1cb092;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 20px;
+
+    
+}
+
+
+#signin-forgot-password:hover {
+    color: gray; 
+
+    
+}
+
+
+
+.signin-input-form {
+    width: 260px;
+    height: 30px;
+    display: block;
+    padding: 0 0 0 5px;
+    margin: auto;
+    font-size: 15px;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    border: 1px solid #d6d6d6;
+}
+
+#sign-in-submit-button {
+    -webkit-appearance: none;
+    width: 270px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #3498db;
+    font-size: 17px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+
+#signin-dont-have-account {
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+
+#signin-dont-have-account a {
+    color: #1cb092;
+    text-decoration: none; 
+}
+
+#signin-dont-have-account a:hover {
+    color: gray;
+}
+
+.submit-signin-form-footer {
+    color: gray;
+    display: block;
+    font-size: 15px;
+    margin: 5px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.submit-signin-form-footer:hover {
+    color: black;
+}
