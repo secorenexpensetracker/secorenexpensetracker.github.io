@@ -15,6 +15,7 @@ import {
 } from "react-router-dom";
 import About from './containers/static/About';
 import ScrollToTop from './components/static/ScrollToTop';
+import Dashboard from './containers/app/Dashboard';
 
 function App() {
   return (
@@ -40,8 +41,39 @@ function App() {
         </Switch>
       </ScrollToTop>
       </Router>
+
+
     </div>
   );
 }
 
 export default App;
+
+
+/*
+
+
+<Router>
+      <ScrollToTop>
+      <Switch>
+          <Route path="/signup">
+            <SignUp />
+          </Route>
+          <Route path="/signin">
+            <SignIn />
+          </Route>
+          <Route path="/howitworks">
+            <HowWorks />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </ScrollToTop>
+      </Router>
+
+
+*/

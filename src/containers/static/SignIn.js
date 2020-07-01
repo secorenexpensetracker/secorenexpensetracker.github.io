@@ -20,7 +20,7 @@ function SignIn() {
         <input type="text" id="sign-in-email-form" className="signin-input-form" />
         <h2 className="signin-input-banner">Password</h2>
         <input type="password" id="sign-in-password-form" className="signin-input-form" />
-        <a href="#" id="signin-forgot-password">Forgot password?</a>
+        <Link to="/" id="signin-forgot-password">Forgot password?</Link>
         <input type="submit" id="sign-in-submit-button" value="Continue" />
       </div>
 

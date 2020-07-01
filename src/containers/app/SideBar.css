@@ -1,0 +1,45 @@
+#side-bar-main-container {
+    font-family: 'Roboto';
+    background-color: #1cb092;
+    margin: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 200px;
+    color: black;
+    box-shadow: 5px 5px 20px #919191;
+    color: white;
+    padding: 0;
+}
+
+#side-bar-logo {
+    text-align: center;
+    cursor: pointer;
+}
+
+#side-bar-logo:hover {
+    color: #b5b5b5;
+}
+
+
+#side-bar-list-container {
+    margin-top: 60px;
+
+}
+
+
+#side-bar-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#side-bar-list li {
+    margin: 0 0 40px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#side-bar-list li:hover {
+    color: #b5b5b5;
+}

@@ -1,9 +1,6 @@
-
-
 #signup-main-container {
     text-align: center;
 }
-
 
 #signup-form-container {
     display: inline-block;
@@ -68,7 +65,7 @@
     font-family: 'Roboto';
     font-size: 10px;
     width: 300px;
-    color: red;
+    color: #1cb092;
     text-align: left;
     opacity: 0;
     transition: opacity 1s;
@@ -125,14 +122,9 @@
     text-decoration: none;
 }
 
-
 #submit-form-signin-signup a:hover {
     color: black;
 }
-
-
-
-
 
 #submit-form-footer {
     color: gray;

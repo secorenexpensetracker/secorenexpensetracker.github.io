@@ -6,7 +6,7 @@ import piechart from '../../resources/images/home-pie-chart.png';
 import bargraph from '../../resources/images/home-bar-graph.png';
 import doughnutgraph from '../../resources/images/home-doughnut-graph.png';
 import linegraph from '../../resources/images/home-line-graph.png';
-import shieldicon from '../../resources/images/home-shield-image.JPEG';
+import shieldicon from '../../resources/images/home-shield-image.png';
 
 import {
     BrowserRouter as Router,

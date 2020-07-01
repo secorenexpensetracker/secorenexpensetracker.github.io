@@ -7,12 +7,10 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link,
-    useHistory
+    Link
   } from "react-router-dom";
 
 function Header(props) {
-    let history = useHistory(); 
     const[showOptions, setOptions] = useState(false);
 
     useEffect(() => {
@@ -52,11 +50,11 @@ function Header(props) {
            <h1 id="header-main-break" />
             <div id={showOptions ? "header-showing-options" : ""} className="header-list-container">
                 <ul id="header-list">
-                    <Link className="header-list-link" onClick={() => history.location.pathname != "/" ? enableBodyScroll(document.body) : 0} to="/"><li id={props.active == "home" ? "header-list-active" : ""}>home</li></Link>
-                    <Link className="header-list-link" onClick={() => enableBodyScroll(document.body)} to="/howitworks"><li id={props.active == "howitworks" ? "header-list-active" : ""}>how it works</li></Link>
-                    <Link className="header-list-link" onClick={() => enableBodyScroll(document.body)} to="/signin"><li id={props.active == "signin" ? "header-list-active" : ""}>sign in</li></Link>
-                    <Link className="header-list-link" onClick={() => enableBodyScroll(document.body)} to="/signup"><li id={props.active == "signup" ? "header-list-active" : ""}>sign up</li></Link>
-                    <Link className="header-list-link" onClick={() => enableBodyScroll(document.body)} to="/about"><li id={props.active == "about" ? "header-list-active" : ""}>about</li></Link>
+                    <Link className="header-list-link" onClick={() => props.active != "home" ? enableBodyScroll(document.body) : 0} to="/"><li id={props.active == "home" ? "header-list-active" : ""}>home</li></Link>
+                    <Link className="header-list-link" onClick={() => props.active != "howitworks" ? enableBodyScroll(document.body) : 0} to="/howitworks"><li id={props.active == "howitworks" ? "header-list-active" : ""}>how it works</li></Link>
+                    <Link className="header-list-link" onClick={() => props.active != "signin" ? enableBodyScroll(document.body) : 0} to="/signin"><li id={props.active == "signin" ? "header-list-active" : ""}>sign in</li></Link>
+                    <Link className="header-list-link" onClick={() => props.active != "signup" ? enableBodyScroll(document.body) : 0} to="/signup"><li id={props.active == "signup" ? "header-list-active" : ""}>sign up</li></Link>
+                    <Link className="header-list-link" onClick={() => props.active != "about" ? enableBodyScroll(document.body) : 0} to="/about"><li id={props.active == "about" ? "header-list-active" : ""}>about</li></Link>
                 </ul>
             </div>
         </div>

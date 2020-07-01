@@ -2,9 +2,9 @@ import React from 'react';
 import './HowWorks.css';
 import Footer from '../../components/static/Footer';
 import Header from '../../components/static/Header';
-import howitworks1 from '../../resources/images/howitworks1.JPEG';
-import howitworks2 from '../../resources/images/howitworks2.JPEG';
-import howitworks3 from '../../resources/images/howitworks3.JPEG';
+import howitworks1 from '../../resources/images/howitworks1.jpeg';
+import howitworks2 from '../../resources/images/howitworks2.jpeg';
+import howitworks3 from '../../resources/images/howitworks3.jpeg';
 
 import {
     BrowserRouter as Router,
@@ -22,7 +22,7 @@ function HowWorks() {
                 <div className="how-it-works-column-description-data-text">
                     <h1 className="how-it-works-column-description-data-text-title">1.</h1>
                     <h2>
-                        Download the Excel/CSV Template that we have provided(note: the Excel/CSV files are not necessary, you may manually add your transactions without having to edit or download any Excel/CSV file)
+                        Download the Excel Template that we have provided(note: the Excel files are not necessary, you may manually add your transactions without having to edit or download any Excel file)
                     </h2>
                 </div>
                 <div className="how-it-works-column-description-data-image">
@@ -35,7 +35,7 @@ function HowWorks() {
                 <div className="how-it-works-column-description-data-text">
                     <h1 className="how-it-works-column-description-data-text-title">2.</h1>
                     <h2>
-                        Fill out your monthly expenses in the Excel/CSV file and add additional categories as you go!
+                        Fill out your monthly expenses in the Excel file and add additional categories as you go!
                     </h2>
                 </div>
                 <div className="how-it-works-column-description-data-image">
