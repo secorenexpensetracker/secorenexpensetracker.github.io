@@ -3,16 +3,8 @@ import './HowWorks.css';
 import Footer from '../../components/static/Footer';
 import Header from '../../components/static/Header';
 import howitworks1 from '../../resources/images/howitworks1.jpeg';
-import howitworks2 from '../../resources/images/howitworks2.jpeg';
+import howitworks2 from '../../resources/images/howitworks2.jpg';
 import howitworks3 from '../../resources/images/howitworks3.jpeg';
-
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
-
 
 function HowWorks() {
   return (
@@ -26,7 +18,7 @@ function HowWorks() {
                     </h2>
                 </div>
                 <div className="how-it-works-column-description-data-image">
-                    <img alt="expensfied how it works icon step one" src={howitworks1}/>
+                    <img className="howitworksimg" alt="expensfied how it works icon step one" src={howitworks1}/>
                 </div>
             </div>
 
@@ -39,7 +31,7 @@ function HowWorks() {
                     </h2>
                 </div>
                 <div className="how-it-works-column-description-data-image">
-                    <img alt="expensfied how it works icon step two" src={howitworks2}/>
+                    <img className="howitworksimg" alt="expensfied how it works icon step two" src={howitworks2}/>
                 </div>
             </div>
 
@@ -52,7 +44,7 @@ function HowWorks() {
                     </h2>
                 </div>
                 <div className="how-it-works-column-description-data-image">
-                    <img alt="expensfied how it works icon step three" src={howitworks3}/>
+                    <img className="howitworksimg" alt="expensfied how it works icon step three" src={howitworks3}/>
                 </div>
             </div>
 

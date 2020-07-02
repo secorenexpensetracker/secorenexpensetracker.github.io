@@ -1,7 +1,6 @@
 #how-it-works-inner-container {
     text-align: center;
     margin-top: 30px;
-
 }
 
 #how-it-works-inner-container h2 {
@@ -11,14 +10,12 @@
 
 }
 
-
-.how-it-works-column-description-data-text h2{
+.how-it-works-column-description-data-text h2 {
     font-size: 20px;
     font-family: 'Roboto';
     color:gray;
     display:inline;
     line-height: 2;
-
 }
 
 #how-it-works-logo {
@@ -27,13 +24,7 @@
     font-family: 'Roboto';
     font-size: 50px;
     font-weight: bold;
-    
-
-
 }
-
-
-
 
 .how-it-works-multi-column-description-data {
     display: flex;
@@ -55,7 +46,6 @@
     width: 90%;
 }
 
-
 .how-it-works-column-description-data-text-title {
     color: black;
 }
@@ -63,7 +53,6 @@
 .how-it-works-column-description-data-text-title {
     font-family: 'Roboto';
 }
-
 
 @media only screen and (min-width: 520px) {
     #how-it-works-flex-reverse {
@@ -76,11 +65,14 @@
     }
 }
 
-
+@media only screen and (max-width: 1300px) {
+    .howitworksimg { width: 400px !important }
+}
+@media only screen and (max-width: 850px) {
+    .howitworksimg { width: 300px !important }
+}
 
 @media only screen and (max-width: 800px) {
-    
-
     .how-it-works-multi-column-description-data {
         width: 100%;
         display: block;
@@ -93,10 +85,4 @@
         margin: 20px;
         font-size: 15px;
     }
-
-    .how-it-works-multi-column-description-data div img {
-        width: 90%;
-    }
-    
-    
 }

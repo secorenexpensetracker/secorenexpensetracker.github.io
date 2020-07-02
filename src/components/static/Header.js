@@ -3,12 +3,7 @@ import React, {useState, useEffect} from 'react';
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import './Header.css';
 
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Header(props) {
     const[showOptions, setOptions] = useState(false);
@@ -39,7 +34,10 @@ function Header(props) {
 
     return (
         <div id="header-main-container">
-            <Link to="/" id="header-logo">expensified</Link>
+            <Link to="/" id="header-logo">
+                expensified
+                <p>expense tracking simplified</p>
+            </Link>
         
             <div id="header-list-mobile-lines" className={showOptions ? "changeIcon" : ""} onClick={handleLineClick}>
                 <div id="header-line1" />

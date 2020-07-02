@@ -4,20 +4,27 @@ import { Link } from "react-router-dom";
 import './SignUp.css';
 
 function SignUp() {
-    const emailRegex =  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    // used for confirmation of password and email
+    const emailRegex = new RegExp([
+        '^(([^<>()\\[\\]\\\\.,;:\\s@"]+(\.[^<>()\\[\\]\\\\.,;:\\s@"]+)*)',
+        '|(".+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]',
+        '{1,3}\\])|(([a-zA-Z\\-0-9]+\.)+[a-zA-Z]{2,}))$'
+    ].join(''));
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [score, setScore] = useState(0);
     const [confirmPassword, setConfirmPassword] = useState("");
 
+    // used for the different requirements
+    const [capital, setCapital] = useState(null);
+    const [special, setSpecial] = useState(null);
+    const [charLength, setCharLength] = useState(null);
+
     // not used for form validation, used for toggling error messages
-    const [passwordInstructions, setInstructions] = useState(false);
     const [emailInvalid, setemailInvalid] = useState(false);
     const [passwordsMatch, setPasswordsMatch] = useState(false);
 
     // used for form validation
     const [enableForm, setEnableForm] = useState(false);
-
 
     // send fetch request, do when finished with backend
     function handleSubmit(e) {
@@ -25,12 +32,12 @@ function SignUp() {
         if(!enableForm) return;
     }
 
-    function verifyFieldsFromPassword(confirmPass, passVal, counter) {
+    function verifyFieldsFromPassword(confirmPass, passVal, passwordValid) {
         const confirm = confirmPass ? confirmPass : confirmPassword;
-        const pass = passVal ? passVal : password;
-        const count = counter ? counter : score;
+        const pass = !isNaN(passVal) ? passVal : password;
+        const ifValid = passwordValid ? passwordValid : special && capital && charLength >= 8;
 
-        if(confirm === pass && count == 3) {
+        if(confirm === pass && ifValid) {
             setPasswordsMatch(false);
             if(email.match(emailRegex)) setEnableForm(true);
         }
@@ -40,58 +47,77 @@ function SignUp() {
         }
     }
 
-    function handleEmailChange(e) {
-        setEmail(e.target.value);
+    function handleEmailChange({ target }) {
+        setEmail(target.value);
 
-        if(!e.target.value.match(emailRegex)) {
+        if(!target.value.match(emailRegex)) {
             setemailInvalid(true);
             setEnableForm(false);
             return;
         }
 
         setemailInvalid(false);
-        if(password == confirmPassword && score == 3) setEnableForm(true);
+        if (
+            password == confirmPassword &&
+            capital && special && charLength >= 8
+        ) setEnableForm(true);
+    }
+    
+    function ifEmptyOrNull(value, func) {
+        if(value === "" || value === null) func()
     }
 
-    function handlePasswordChange(e) {
-        setPassword(e.target.value);
-        const value = e.target.value;
+    function handlePasswordChange({ target }) {
+        setPassword(target.value);
+        setCharLength(target.value.length);
+        const value = target.value;
+        const pattern = /(?=.*[\+\-\_\@\#\$\%\&])/;
 
-        if(value == "" || value==null) {
-            setScore(1);
+        ifEmptyOrNull(value, () => {
+            setCapital(null);
+            setSpecial(null);
+            setCharLength(null);
             setEnableForm(false);
             setPasswordsMatch(true);
-            setInstructions(true);
             return;
-        }
+        })
 
-        let counter = 1;
-        let pattern = /^[A-Za-z]+$/;
+        let scores = {
+            charVal : target.value.length,
+            specialVal: true,
+            capitalVal: true
+        };
 
-        if(value.length >= 8 && !value.match(pattern)) ++counter;
-        if(value != value.toLowerCase()) ++counter;
+        if(!value.match(pattern)) scores.specialVal = false;
+        if(value === value.toLowerCase()) scores.capitalVal = false;
 
-        if(counter < 3) setInstructions(true);
-        else setInstructions(false);
-
-        verifyFieldsFromPassword(null, value, counter);
-        setScore(counter);
+        const passwordValid = scores.specialVal && scores.capitalVal && scores.charLength >= 8
+        verifyFieldsFromPassword(null, value, passwordValid);
+        
+        setCapital(scores.capitalVal);
+        setSpecial(scores.specialVal);
     }
 
     function handleConfirmPasswordChange({ target }) {
-        setConfirmPassword(target.value);
         verifyFieldsFromPassword(target.value)
-    }
-
-    function ifEmptyOrNull(value, func) {
-        if(value == "" || value == null) func()
+        setConfirmPassword(target.value);
     }
 
     function handlePasswordFocus({ target }) {
         ifEmptyOrNull(target.value, () => {
-            setInstructions(true);
             setEnableForm(false);
-            setScore(1);
+            setSpecial(null);
+            setCapital(null);
+            setCharLength(null);
+        })
+    }
+
+    function handlePasswordBlur({ target }) {
+        ifEmptyOrNull(target.value, () => {
+            setEnableForm(false);
+            setSpecial(null);
+            setCapital(null);
+            setCharLength(null);
         })
     }
 
@@ -121,10 +147,9 @@ function SignUp() {
                     <h3 id={emailInvalid ? "signup-form-email-show-message" : ""} className="signup-form-message">Please enter a valid email</h3>
 
                     <h3 className="signup-form-main-banner">Password</h3>
-                    <input type="password" onFocus={handlePasswordFocus} onChange={handlePasswordChange} value={password} id="submit-form-password" className="submit-form-input" />
-                    <PasswordStrength score={score}/>
-                    <h3 id={passwordInstructions ? "signup-form-password-show-message" : ""} className="signup-form-message">Please make sure your password has at least 8 characters, one capital letter, and one special character</h3>
-
+                    <input type="password" onFocus={handlePasswordFocus} onChange={handlePasswordChange} onBlur={handlePasswordBlur} value={password} id="submit-form-password" className="submit-form-input" />
+                    <PasswordStrength capital={capital} special={special} charLength={charLength}/>
+                    
                     <h3 className="signup-form-main-banner">Confirm Password</h3>
                     <input type="password" id="submit-form-confirm-password" onFocus={handleConfirmFocus} onChange={handleConfirmPasswordChange} value={confirmPassword} className="submit-form-input"/>
                     <h3 id={passwordsMatch ? "signup-form-confirm-password-show-message" : ""} className="signup-form-message">Your passwords don't match or your password is invalid</h3>

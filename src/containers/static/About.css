@@ -1,122 +1,132 @@
 #about-main-container {
-    font-family: "Roboto", serif;
-    color: #1cb092;
+  font-family: "Roboto", serif;
+  color: #1cb092;
+}
 
+@media only screen and (max-width: 1300px) {
+  img, .text, .data { display: block !important }
+  img, .text { width: 90% !important }
+  img { width: 50% !important }
+  .image {
+    width: 90% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
-  
+}
 
-  
-  #about-inner-container {
-    height: 18vw;
-    width: 100%;
-    margin: 0;
-  }
-  
-  #about-inner-container h2 {
-    font-size: 30px;
+@media only screen and (max-width: 1000px) {
+  h2 { font-size: 15px !important }
+}
+
+@media only screen and (max-width: 500px) {
+  h2 { font-size: 13px !important }
+}
+
+#about-inner-container {
+  height: 18vw;
+  width: 100%;
+  margin: 0;
+}
+
+#about-inner-container h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 0px;
+}
+
+#about-first-member,
+#about-second-member {
+  margin-left: 50px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#about-first-member p,
+#about-second-member p {
+  display: inline-block;
+  text-align: center;
+  color: gray;
+  width: 40vw;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 2;
+}
+
+#about-first-member h2,
+#about-second-member h2 {
+  width: 40vw;
+  text-align: center;
+}
+
+#about-first-member img,
+#about-second-member img {
+  float: right;
+  margin-right: 200px;
+  margin-top: 50px;
+  width: 300px;
+  height: auto;
+}
+
+#about-contact {
+  margin: 60px 0 30px;
+}
+#about-contact p {
     text-align: center;
-    margin-top: 70px;
-    margin-bottom: 0px;
-  }
-  
-  #about-first-member,
-  #about-second-member {
-    margin-left: 50px;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  
-  #about-first-member p,
-  #about-second-member p {
-    display: inline-block;
-    text-align: center;
-    color: gray;
-    width: 40vw;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 2;
-  }
-  
-  #about-first-member h2,
-  #about-second-member h2 {
-    width: 40vw;
-    text-align: center;
-  }
-  
-  #about-first-member img,
-  #about-second-member img {
-    float: right;
-    margin-right: 200px;
-    margin-top: 50px;
-    width: 300px;
-    height: auto;
-  }
-  
-  #about-contact {
-    margin: 60px 0 30px;
+}
+
+@media screen and (min-width: 1350px) {
+  #about-contact h2 {
+    font-size: 45px;
   }
   #about-contact p {
-      text-align: center;
+    font-size: 25px;
   }
-  
-  @media screen and (min-width: 1350px) {
-    #about-contact h2 {
-      font-size: 45px;
-    }
-    #about-contact p {
-      font-size: 25px;
-    }
+}
+
+@media screen and (max-width: 1050px) {
+  #about-first-member img,
+  #about-second-member img,
+  #about-first-member p,
+  #about-second-member p {
+    width: 100%;
+    float: none;
+    clear: right;
+    font-size: 16px;
+    line-height: 25px;
   }
-  
-  @media screen and (max-width: 1050px) {
-    #about-first-member img,
-    #about-second-member img,
-    #about-first-member p,
-    #about-second-member p {
-      width: 100%;
-      float: none;
-      clear: right;
-      font-size: 16px;
-      line-height: 25px;
-    }
-    #about-first-member img,
-    #about-second-member img {
-      display: block;
-      width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    #about-first-member h2,
-    #about-second-member h2 {
-      width: 100%;
-      text-align: center;
-    }
-    #about-inner-container h2 {
-      font-size: 35px;
-    }
-    #about h1 {
-      font-size: 65px;
-    }
-    
+  #about-first-member img,
+  #about-second-member img {
+    display: block;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #about-first-member h2,
+  #about-second-member h2 {
+    width: 100%;
+    text-align: center;
+  }
+  #about-inner-container h2 {
+    font-size: 35px;
+  }
+  #about h1 {
+    font-size: 65px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #about-first-member,
+  #about-second-member {
+    margin-left: 0px;
   }
 
-
-
-
-  @media only screen and (max-width: 600px) {
-    #about-first-member,
-    #about-second-member {
-      margin-left: 0px;
-    }
-
-    #about-first-member img,
+  #about-first-member img,
   #about-second-member img {
     display: block;
     margin: auto;
     width: 200px;
     height: auto;
-  }
-
-
-    
-  }
+  } 
+}

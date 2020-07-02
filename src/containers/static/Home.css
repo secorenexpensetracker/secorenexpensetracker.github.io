@@ -1,3 +1,5 @@
+#home-main-container { overflow-x: hidden }
+
 #home-multi-column-hero {
     width: 100%;
     display: flex;
@@ -87,7 +89,7 @@
     width: 90%;
 }
 
-@media only screen and (min-width: 100px) {
+@media only screen and (min-width: 1000px) {
     .home-multi-column-description-data div {
         width: 40%;
         display: inline-block;
