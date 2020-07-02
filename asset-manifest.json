@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/secorenexpensetracker.github.io/static/css/main.849f33f3.chunk.css",
+    "main.js": "/secorenexpensetracker.github.io/static/js/main.b49be937.chunk.js",
+    "main.js.map": "/secorenexpensetracker.github.io/static/js/main.b49be937.chunk.js.map",
+    "runtime-main.js": "/secorenexpensetracker.github.io/static/js/runtime-main.c3abba77.js",
+    "runtime-main.js.map": "/secorenexpensetracker.github.io/static/js/runtime-main.c3abba77.js.map",
+    "static/js/2.e822b30f.chunk.js": "/secorenexpensetracker.github.io/static/js/2.e822b30f.chunk.js",
+    "static/js/2.e822b30f.chunk.js.map": "/secorenexpensetracker.github.io/static/js/2.e822b30f.chunk.js.map",
+    "index.html": "/secorenexpensetracker.github.io/index.html",
+    "precache-manifest.1ee8762815615014e771cc2bc8a7aee6.js": "/secorenexpensetracker.github.io/precache-manifest.1ee8762815615014e771cc2bc8a7aee6.js",
+    "service-worker.js": "/secorenexpensetracker.github.io/service-worker.js",
+    "static/css/main.849f33f3.chunk.css.map": "/secorenexpensetracker.github.io/static/css/main.849f33f3.chunk.css.map",
+    "static/js/2.e822b30f.chunk.js.LICENSE.txt": "/secorenexpensetracker.github.io/static/js/2.e822b30f.chunk.js.LICENSE.txt",
+    "static/media/home-bar-graph.png": "/secorenexpensetracker.github.io/static/media/home-bar-graph.ee9d91d1.png",
+    "static/media/home-doughnut-graph.png": "/secorenexpensetracker.github.io/static/media/home-doughnut-graph.61e54be0.png",
+    "static/media/home-line-graph.png": "/secorenexpensetracker.github.io/static/media/home-line-graph.9da91870.png",
+    "static/media/home-pie-chart.png": "/secorenexpensetracker.github.io/static/media/home-pie-chart.db5cc5c6.png",
+    "static/media/home-shield-image.png": "/secorenexpensetracker.github.io/static/media/home-shield-image.b74c52a3.png",
+    "static/media/howitworks1.jpeg": "/secorenexpensetracker.github.io/static/media/howitworks1.38433efc.jpeg",
+    "static/media/howitworks2.jpg": "/secorenexpensetracker.github.io/static/media/howitworks2.f94eb759.jpg",
+    "static/media/howitworks3.jpeg": "/secorenexpensetracker.github.io/static/media/howitworks3.de5732ec.jpeg",
+    "static/media/mukund.JPG": "/secorenexpensetracker.github.io/static/media/mukund.898a4eb5.JPG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c3abba77.js",
+    "static/js/2.e822b30f.chunk.js",
+    "static/css/main.849f33f3.chunk.css",
+    "static/js/main.b49be937.chunk.js"
+  ]
+}
