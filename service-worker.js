@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/secorenexpensetracker.github.io/precache-manifest.67c3f0c94e7fb7fe2b6af50de30456e4.js"
+  "/secorenexpensetracker.github.io/precache-manifest.4a78995837d8ee937acec8983352c59e.js"
 );
 
 self.addEventListener('message', (event) => {

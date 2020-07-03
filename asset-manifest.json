@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/secorenexpensetracker.github.io/static/css/main.a74293b9.chunk.css",
+    "main.css": "/secorenexpensetracker.github.io/static/css/main.57242610.chunk.css",
     "main.js": "/secorenexpensetracker.github.io/static/js/main.db2cc1a2.chunk.js",
     "main.js.map": "/secorenexpensetracker.github.io/static/js/main.db2cc1a2.chunk.js.map",
     "runtime-main.js": "/secorenexpensetracker.github.io/static/js/runtime-main.c3abba77.js",
@@ -8,9 +8,9 @@
     "static/js/2.e822b30f.chunk.js": "/secorenexpensetracker.github.io/static/js/2.e822b30f.chunk.js",
     "static/js/2.e822b30f.chunk.js.map": "/secorenexpensetracker.github.io/static/js/2.e822b30f.chunk.js.map",
     "index.html": "/secorenexpensetracker.github.io/index.html",
-    "precache-manifest.67c3f0c94e7fb7fe2b6af50de30456e4.js": "/secorenexpensetracker.github.io/precache-manifest.67c3f0c94e7fb7fe2b6af50de30456e4.js",
+    "precache-manifest.4a78995837d8ee937acec8983352c59e.js": "/secorenexpensetracker.github.io/precache-manifest.4a78995837d8ee937acec8983352c59e.js",
     "service-worker.js": "/secorenexpensetracker.github.io/service-worker.js",
-    "static/css/main.a74293b9.chunk.css.map": "/secorenexpensetracker.github.io/static/css/main.a74293b9.chunk.css.map",
+    "static/css/main.57242610.chunk.css.map": "/secorenexpensetracker.github.io/static/css/main.57242610.chunk.css.map",
     "static/js/2.e822b30f.chunk.js.LICENSE.txt": "/secorenexpensetracker.github.io/static/js/2.e822b30f.chunk.js.LICENSE.txt",
     "static/media/home-bar-graph.png": "/secorenexpensetracker.github.io/static/media/home-bar-graph.ee9d91d1.png",
     "static/media/home-doughnut-graph.png": "/secorenexpensetracker.github.io/static/media/home-doughnut-graph.61e54be0.png",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.c3abba77.js",
     "static/js/2.e822b30f.chunk.js",
-    "static/css/main.a74293b9.chunk.css",
+    "static/css/main.57242610.chunk.css",
     "static/js/main.db2cc1a2.chunk.js"
   ]
 }
